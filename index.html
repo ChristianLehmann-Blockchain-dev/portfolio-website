@@ -2,69 +2,65 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Max Mustermann – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Webentwickler</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a2e8f4e6f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Max Mustermann</h1>
-      <nav>
-        <a href="#about">Über mich</a>
-        <a href="#projects">Projekte</a>
-        <a href="#contact">Kontakt</a>
-        <button id="darkToggle" title="Dark Mode umschalten">🌓</button>
-      </nav>
-    </div>
+    <h1 class="animate-fade-in">Christian Lehmann</h1>
+    <nav>
+      <a href="#about" class="nav-link">Über mich</a>
+      <a href="#projects" class="nav-link">Projekte</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+    </nav>
   </header>
 
-  <section id="about" class="container">
-    <h2>Über mich</h2>
-    <p>Ich bin ein leidenschaftlicher Webentwickler mit Fokus auf moderne, performante Weblösungen.</p>
-    <ul class="skills">
-      <li><i class="fab fa-html5"></i> HTML5</li>
-      <li><i class="fab fa-css3-alt"></i> CSS3</li>
-      <li><i class="fab fa-js-square"></i> JavaScript</li>
-      <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-    </ul>
-  </section>
+  <main>
+    <section id="about" class="section animate-slide-up">
+      <h2>Über mich</h2>
+      <p>Ich bin Webentwickler mit Fokus auf moderne, responsive Webseiten und tolle User Experiences.</p>
+    </section>
 
-  <section id="projects" class="container">
-    <h2>Projekte</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>ToDo App</h3>
-        <p>Eine App zur Aufgabenverwaltung – mit Vanilla JavaScript.</p>
-        <a href="https://github.com/deinusername/todo-app" target="_blank">GitHub ansehen</a>
+    <section id="projects" class="section animate-slide-up">
+      <h2>Projekte</h2>
+      <div class="projects-grid">
+        <div class="project-card animate-zoom">
+          <h3>Projekt 1</h3>
+          <p>Beschreibung von Projekt 1.</p>
+        </div>
+        <div class="project-card animate-zoom">
+          <h3>Projekt 2</h3>
+          <p>Beschreibung von Projekt 2.</p>
+        </div>
+        <div class="project-card animate-zoom">
+          <h3>Projekt 3</h3>
+          <p>Beschreibung von Projekt 3.</p>
+        </div>
       </div>
-      <div class="project">
-        <h3>Wetter-App</h3>
-        <p>Zeigt Wetterdaten über die OpenWeather API.</p>
-        <a href="https://github.com/deinusername/weather-app" target="_blank">GitHub ansehen</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="container">
-    <h2>Kontakt</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <input type="text" name="name" placeholder="Dein Name" required />
-      <input type="email" name="email" placeholder="Deine E-Mail" required />
-      <textarea name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
-      <button type="submit">Senden</button>
-    </form>
-  </section>
+    <section id="contact" class="section animate-slide-up">
+      <h2>Kontakt</h2>
+      <form id="contact-form" action="https://formspree.io/f/xldnbnyy" method="POST">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Dein Name" />
+
+        <label for="email">E-Mail *</label>
+        <input type="email" id="email" name="_replyto" required placeholder="dein@email.de" />
+
+        <label for="message">Nachricht *</label>
+        <textarea id="message" name="message" required placeholder="Deine Nachricht"></textarea>
+
+        <button type="submit">Senden</button>
+
+        <p id="form-status" role="alert"></p>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Max Mustermann</p>
-      <div class="social">
-        <a href="https://github.com/deinusername" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/deinusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
+    <p>© 2025 Max Mustermann</p>
   </footer>
 
   <script src="script.js"></script>
